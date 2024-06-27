@@ -2,10 +2,12 @@ import express from 'express'
 import * as dotenv from 'dotenv'
 import cors from 'cors'
 
+import dbConnect from './config/db.config.js'
 import userRouter from './routes/users.routes.js'
 import productRouter from './routes/products.routes.js'
 
 dotenv.config()
+dbConnect()
 
 const app = express()
 
